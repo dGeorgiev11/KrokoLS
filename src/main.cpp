@@ -32,9 +32,6 @@ int main(int argc, char *argv[]) {
     const int size = 1024;
     char buffer[size];
     handle_dir(getcwd(buffer, size));
-    std::string full_path = std::string(buffer);
-    full_path += argv[1];
-    std::cout<<full_path<<'\n';
     handle_status(read_dir(argv[1], content));
     print_content(argv[1],content);
   }
