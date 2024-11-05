@@ -10,4 +10,7 @@ utils.o:
 	g++ -c ./src/utils.cpp -o ./obj/utils.o
 
 clean:
-	rm krokols obj/*.o
+	rm krokols obj/*.o /usr/local/bin/kls
+
+install: krokols
+	cp krokols /usr/local/bin/kls	
